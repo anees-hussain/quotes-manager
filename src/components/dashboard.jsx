@@ -23,6 +23,7 @@ class Dashboard extends Component {
     db.ref("/quotes/").on("value", (snapshot) => {
       let quotesArray = snapshot.val();
       let entries = Object.entries(quotesArray);
+      dbData = [];
       for (let i = 0; i < entries.length; i++) {
         dbData.push(entries[i][1]);
       }
@@ -77,7 +78,7 @@ class Dashboard extends Component {
               class="d-inline-block align-top"
               alt=""
             />
-            Quotes Manager
+            uotes Manager
           </a>
               <ul className="navbar-nav">
                 <li className="nav-item active">
